@@ -46,3 +46,45 @@
 1712077485 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.cpp
 	"UzytkownikMenedzer.h"
 
+1710106965 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresat.cpp
+	"Adresat.h"
+
+1709658244 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresat.h
+	<iostream>
+
+1712076940 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1712076940 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1712077608 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1712077608 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+
+1538739231 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\uzytkownik.h
+	<iostream>
+
+1538727955 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1712078035 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\uzytkownikmenedzer.cpp
+	"UzytkownikMenedzer.h"
+
+1712078035 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\uzytkownikmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+

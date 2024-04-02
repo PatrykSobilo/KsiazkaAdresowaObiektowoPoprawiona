@@ -6,7 +6,7 @@
 	<iostream>
 	"UzytkownikMenedzer.h"
 
-1712076844 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.h
+1712077461 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -18,7 +18,7 @@
 1538739231 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownik.h
 	<iostream>
 
-1712076299 c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.h
+1712077608 c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -30,19 +30,19 @@
 	<iostream>
 	<sstream>
 
-1712077157 source:c:\users\psobilo\desktop\ks-obiekt-wprow\main.cpp
+1712077337 source:c:\users\psobilo\desktop\ks-obiekt-wprow\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
 1712076940 source:c:\users\psobilo\desktop\ks-obiekt-wprow\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1712076322 source:c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.cpp
+1712077608 source:c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
 1538727955 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1712076844 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.cpp
+1712077485 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.cpp
 	"UzytkownikMenedzer.h"
 

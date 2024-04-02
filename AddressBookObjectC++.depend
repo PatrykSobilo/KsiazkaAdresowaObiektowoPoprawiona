@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1538746155 source:c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1547265714 c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.h
+	<iostream>
+	"UzytkownikMenedzer.h"
+
+1547265714 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+
+1538739231 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownik.h
+	<iostream>
+
+1712076299 c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+
+1538739231 c:\users\psobilo\desktop\ks-obiekt-wprow\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1705928582 source:c:\users\psobilo\desktop\ks-obiekt-wprow\main.cpp
+	<iostream>
+	"KsiazkaAdresowa.h"
+
+1538739231 source:c:\users\psobilo\desktop\ks-obiekt-wprow\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1539687731 source:c:\users\psobilo\desktop\ks-obiekt-wprow\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1538727955 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1547265714 source:c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.cpp
+	"UzytkownikMenedzer.h"
+

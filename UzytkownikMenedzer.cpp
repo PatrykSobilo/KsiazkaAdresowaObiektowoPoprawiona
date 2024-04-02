@@ -131,3 +131,15 @@ void UzytkownikMenedzer::wylogowanieUzytkownika()
     idZalogowanegoUzytkownika = 0;
     cout << "WYLOGOWANO" << endl;
 }
+
+int UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if(idZalogowanegoUzytkownika > 0)
+        return 1;
+    else return 0;
+}
+
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}

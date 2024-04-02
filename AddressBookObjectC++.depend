@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1712077109 source:c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.cpp
+1712077736 source:c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1712077118 c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.h
+1712077741 c:\users\psobilo\desktop\ks-obiekt-wprow\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenedzer.h"
 
-1712077461 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.h
+1712078035 c:\users\psobilo\desktop\ks-obiekt-wprow\uzytkownikmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -30,7 +30,7 @@
 	<iostream>
 	<sstream>
 
-1712077337 source:c:\users\psobilo\desktop\ks-obiekt-wprow\main.cpp
+1712077682 source:c:\users\psobilo\desktop\ks-obiekt-wprow\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 

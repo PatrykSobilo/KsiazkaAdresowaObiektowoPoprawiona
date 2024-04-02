@@ -32,17 +32,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../ks-obiekt-wprow/KsiazkaAdresowa.cpp" />
-		<Unit filename="../../../ks-obiekt-wprow/KsiazkaAdresowa.h" />
-		<Unit filename="../../../ks-obiekt-wprow/MetodyPomocnicze.cpp" />
-		<Unit filename="../../../ks-obiekt-wprow/MetodyPomocnicze.h" />
-		<Unit filename="../../../ks-obiekt-wprow/PlikZUzytkownikami.cpp" />
-		<Unit filename="../../../ks-obiekt-wprow/PlikZUzytkownikami.h" />
-		<Unit filename="../../../ks-obiekt-wprow/Uzytkownik.cpp" />
-		<Unit filename="../../../ks-obiekt-wprow/Uzytkownik.h" />
-		<Unit filename="../../../ks-obiekt-wprow/UzytkownikMenedzer.cpp" />
-		<Unit filename="../../../ks-obiekt-wprow/UzytkownikMenedzer.h" />
-		<Unit filename="../../../ks-obiekt-wprow/main.cpp" />
+		<Unit filename="Adresat.cpp" />
+		<Unit filename="Adresat.h" />
+		<Unit filename="KsiazkaAdresowa.cpp" />
+		<Unit filename="KsiazkaAdresowa.h" />
+		<Unit filename="MetodyPomocnicze.cpp" />
+		<Unit filename="MetodyPomocnicze.h" />
+		<Unit filename="PlikZUzytkownikami.cpp" />
+		<Unit filename="PlikZUzytkownikami.h" />
+		<Unit filename="Uzytkownik.cpp" />
+		<Unit filename="Uzytkownik.h" />
+		<Unit filename="UzytkownikMenedzer.cpp" />
+		<Unit filename="UzytkownikMenedzer.h" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

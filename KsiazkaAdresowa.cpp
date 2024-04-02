@@ -31,3 +31,13 @@ void KsiazkaAdresowa::dodajAdresata()
     }
     else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
 }
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    {
+        AdresatMenedzer adresatMenedzer("ADRESACI.txt", uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenedzer.wyswietlWszystkichAdresatow();
+    }
+    else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
+}

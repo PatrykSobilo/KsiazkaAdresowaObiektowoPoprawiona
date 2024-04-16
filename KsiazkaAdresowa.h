@@ -11,12 +11,17 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
+
+    //AdresatMenedzer *adresatMenedzer - gdybym potrzebowal przejsc na adresatMenedzera w klasie, od razu jako wskaznik
+
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {};
+    //~KsiazkaAdresowa() - gdybym potrzebowal destruktora
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
+    void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
 
     void dodajAdresata();

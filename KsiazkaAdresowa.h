@@ -26,6 +26,11 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+
+    void menuGlowne();
+    void menuUzytkownika();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 };
 
 #endif

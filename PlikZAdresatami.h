@@ -14,9 +14,9 @@ class PlikZAdresatami
 {
     string nazwaPlikuZAdresatami;
     int idOstatniegoAdresata;
+    bool czyPlikJestPusty(fstream &plikTekstowy);
 
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    bool czyPlikJestPusty(fstream &plikTekstowy);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);

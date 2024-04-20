@@ -12,25 +12,33 @@ class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
 
-    //AdresatMenedzer *adresatMenedzer - gdybym potrzebowal przejsc na adresatMenedzera w klasie, od razu jako wskaznik
+    AdresatMenedzer *adresatMenedzer;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
+
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {};
-    //~KsiazkaAdresowa() - gdybym potrzebowal destruktora
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+    : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    {
+        adresatMenedzer = NULL;
+    };
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenedzer;
+        adresatMenedzer = NULL;
+    };
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 
+    bool czyUzytkownikJestZalogowany();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
-    void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-
-    void menuGlowne();
-    void menuUzytkownika();
-    char wybierzOpcjeZMenuGlownego();
-    char wybierzOpcjeZMenuUzytkownika();
 };
 
 #endif

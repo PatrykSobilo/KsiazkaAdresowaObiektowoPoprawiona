@@ -55,7 +55,7 @@
 1713287766 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1713287764 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\metodypomocnicze.h
+1713617097 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\metodypomocnicze.h
 	<iostream>
 	<fstream>
 	<windows.h>
@@ -66,7 +66,7 @@
 1712681502 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1712679821 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzuzytkownikami.h
+1713374427 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -92,25 +92,27 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1712684673 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.cpp
+1713617605 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1713291288 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.h
+1713616976 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenedzer.h"
 	"AdresatMenedzer.h"
 
-1713290233 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\main.cpp
+1713617242 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\main.cpp
+	<iostream>
+	"KsiazkaAdresowa.h"
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"AdresatMenedzer.h"
 	"AdresatMenedzer.h"
 	"PlikZAdresatami.h"
 
-1712683984 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.cpp
+1713374642 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1712684010 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.h
+1713374642 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.h
 	<iostream>
 	<fstream>
 	<vector>

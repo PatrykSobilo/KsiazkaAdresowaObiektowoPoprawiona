@@ -15,9 +15,9 @@ class PlikZUzytkownikami
 {
     const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 
-    bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+    bool czyPlikJestPusty();
 
 public:
     PlikZUzytkownikami(string nazwaPlikuZUzytkownikami) : NAZWA_PLIKU_Z_UZYTKOWNIKAMI(nazwaPlikuZUzytkownikami) {};

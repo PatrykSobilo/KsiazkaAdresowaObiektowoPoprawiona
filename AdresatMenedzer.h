@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
+#include <fstream>
 
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
@@ -16,6 +18,7 @@ class AdresatMenedzer
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     PlikZAdresatami plikZAdresatami;
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -25,6 +28,7 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
 };
 
 #endif

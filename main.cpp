@@ -4,12 +4,6 @@
 
 using namespace std;
 
-#include <iostream>
-
-#include "KsiazkaAdresowa.h"
-
-using namespace std;
-
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "ADRESACI.txt");
@@ -48,7 +42,7 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
                //ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();

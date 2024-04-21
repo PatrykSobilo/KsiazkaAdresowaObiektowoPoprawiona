@@ -50,7 +50,7 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
 char MetodyPomocnicze::wczytajZnak()
 {
     string wejscie = "";
-    char znak = {0};
+    char znak  = {0};
 
     while (true)
     {

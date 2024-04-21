@@ -92,15 +92,15 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1713711513 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.cpp
+1713714160 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1713712473 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.h
+1713714137 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenedzer.h"
 	"AdresatMenedzer.h"
 
-1713712246 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\main.cpp
+1713714066 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"AdresatMenedzer.h"
@@ -110,7 +110,7 @@
 1713617800 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1713713354 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.h
+1713714066 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\plikzadresatami.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -118,10 +118,10 @@
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1713713079 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresatmenedzer.cpp
+1713714066 source:c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresatmenedzer.cpp
 	"AdresatMenedzer.h"
 
-1713712305 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresatmenedzer.h
+1713714197 c:\users\psobilo\desktop\programowanie\c++\addressbookobjectc++\adresatmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>

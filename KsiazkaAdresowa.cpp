@@ -111,4 +111,12 @@ void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
     else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
 }
 
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    {
+        adresatMenedzer -> wyszukajAdresatowPoNazwisku();
+    }
+    else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
+}
 

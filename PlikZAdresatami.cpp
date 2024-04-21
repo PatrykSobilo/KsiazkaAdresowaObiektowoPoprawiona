@@ -187,38 +187,49 @@ int PlikZAdresatami::zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
     return 0;
 }
 
-void PlikZAdresatami::usunWybranaLinieWPliku(int numerUsuwanejLinii)
+void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
 {
-    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
-    string wczytanaLinia = "", nazwaTymczasowegoPlikuZAdresatami = "TYMCZASOWI.txt";
-    int numerWczytanejLinii = 1;
+    fstream plikZAdresatami;
+    fstream plikTymczasowy;
+    string linijkaZPlikuAdresatow = "";
+    string numerIdZLinijkiPliku = "";
+    string pojedynczyZnakZLinijkiPliku = "";
+    string nazwaPlikuTymczasowego = "plikTymczasowy.txt";
+    string liniaDoZliczenia;
+    int i = 0;
+    int nrIdAdresataZPliku = 0;
 
-    odczytywanyPlikTekstowy.open(NAZWA_PLIKU.c_str(), ios::in);
-    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
+    plikZAdresatami.open(NAZWA_PLIKU.c_str(),ios::in);
+    plikTymczasowy.open(nazwaPlikuTymczasowego.c_str(),ios::out | ios::app);
 
-    if (odczytywanyPlikTekstowy.good() == true && numerUsuwanejLinii != 0)
+    while(getline(plikZAdresatami, linijkaZPlikuAdresatow))
     {
-        while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
+        pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
+        while(pojedynczyZnakZLinijkiPliku != "|")
         {
-            // Tych przypadkow jest tyle, gdyz chcemy osiagnac taki efekt,
-            // aby na koncu pliku nie bylo pustej linii
-            if (numerWczytanejLinii == numerUsuwanejLinii) {}
-            else if (numerWczytanejLinii == 1 && numerWczytanejLinii != numerUsuwanejLinii)
-                tymczasowyPlikTekstowy << wczytanaLinia;
-            else if (numerWczytanejLinii == 2 && numerUsuwanejLinii == 1)
-                tymczasowyPlikTekstowy << wczytanaLinia;
-            else if (numerWczytanejLinii > 2 && numerUsuwanejLinii == 1)
-                tymczasowyPlikTekstowy << endl << wczytanaLinia;
-            else if (numerWczytanejLinii > 1 && numerUsuwanejLinii != 1)
-                tymczasowyPlikTekstowy << endl << wczytanaLinia;
-            numerWczytanejLinii++;
+            numerIdZLinijkiPliku += pojedynczyZnakZLinijkiPliku;
+            i++;
+            pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
         }
-        odczytywanyPlikTekstowy.close();
-        tymczasowyPlikTekstowy.close();
-
-        remove(NAZWA_PLIKU.c_str());
-        rename(nazwaTymczasowegoPlikuZAdresatami.c_str(), NAZWA_PLIKU.c_str());
+        nrIdAdresataZPliku = atoi(numerIdZLinijkiPliku.c_str());
+        if(nrIdAdresataZPliku != idUsuwanegoAdresata)
+        {
+            if (PlikTekstowy::czyPlikJestPusty(plikTymczasowy) == true)
+            {
+                plikTymczasowy << linijkaZPlikuAdresatow;
+            }
+            else
+            {
+                plikTymczasowy << endl << linijkaZPlikuAdresatow;
+            }
+        }
+        i = 0;
+        numerIdZLinijkiPliku = "";
     }
+    plikZAdresatami.close();
+    plikTymczasowy.close();
+    remove(NAZWA_PLIKU.c_str());
+    rename(nazwaPlikuTymczasowego.c_str(), NAZWA_PLIKU.c_str());
 }
 
 void PlikZAdresatami::ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata)

@@ -30,7 +30,7 @@ public:
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
-    int usunAdresata();
+    void usunAdresata();
     int podajIdWybranegoAdresata();
 };
 

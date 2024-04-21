@@ -32,7 +32,7 @@ public:
     int pobierzZPlikuIdOstatniegoAdresata();
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
-    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+    void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
 
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
     int pobierzIdOstatniegoAdresata();

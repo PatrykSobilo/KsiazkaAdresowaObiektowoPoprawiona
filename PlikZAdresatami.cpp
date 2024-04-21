@@ -4,13 +4,13 @@ bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+    plikTekstowy.open(NAZWA_PLIKU.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty() == true)
+        if (PlikTekstowy::czyPlikJestPusty() == true)
         {
             plikTekstowy << liniaZDanymiAdresata;
         }
@@ -46,7 +46,7 @@ int PlikZAdresatami::pobierzZPlikuIdOstatniegoAdresata()
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open(NAZWA_PLIKU.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -78,7 +78,7 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open(NAZWA_PLIKU.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -155,4 +155,90 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
         }
     }
     return adresat;
+}
+
+int PlikZAdresatami::zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
+{
+    bool czyIstniejeAdresat = false;
+    int numerLiniiWPlikuTekstowym = 1;
+    string daneJednegoAdresataOddzielonePionowymiKreskami = "";
+    fstream plikTekstowy;
+    plikTekstowy.open(NAZWA_PLIKU.c_str(), ios::in);
+
+    if (plikTekstowy.good() == true && idAdresata != 0)
+    {
+        while(getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
+        {
+            if(idAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
+            {
+                czyIstniejeAdresat = true;
+                plikTekstowy.close();
+                return numerLiniiWPlikuTekstowym;
+            }
+            else
+                numerLiniiWPlikuTekstowym++;
+        }
+        if (czyIstniejeAdresat = false)
+        {
+            plikTekstowy.close();
+            return 0;
+        }
+    }
+    return 0;
+}
+
+void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
+{
+    fstream plikZAdresatami;
+    fstream plikTymczasowy;
+    string linijkaZPlikuAdresatow = "";
+    string numerIdZLinijkiPliku = "";
+    string pojedynczyZnakZLinijkiPliku = "";
+    string nazwaPlikuTymczasowego = "plikTymczasowy.txt";
+    string liniaDoZliczenia;
+    int i = 0;
+    int nrIdAdresataZPliku = 0;
+
+    plikZAdresatami.open(NAZWA_PLIKU.c_str(),ios::in);
+    plikTymczasowy.open(nazwaPlikuTymczasowego.c_str(),ios::out | ios::app);
+
+    while(getline(plikZAdresatami, linijkaZPlikuAdresatow))
+    {
+        pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
+        while(pojedynczyZnakZLinijkiPliku != "|")
+        {
+            numerIdZLinijkiPliku += pojedynczyZnakZLinijkiPliku;
+            i++;
+            pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
+        }
+        nrIdAdresataZPliku = atoi(numerIdZLinijkiPliku.c_str());
+        if(nrIdAdresataZPliku != idUsuwanegoAdresata)
+        {
+            if (PlikTekstowy::czyPlikJestPusty(plikTymczasowy) == true)
+            {
+                plikTymczasowy << linijkaZPlikuAdresatow;
+            }
+            else
+            {
+                plikTymczasowy << endl << linijkaZPlikuAdresatow;
+            }
+        }
+        i = 0;
+        numerIdZLinijkiPliku = "";
+    }
+    plikZAdresatami.close();
+    plikTymczasowy.close();
+    remove(NAZWA_PLIKU.c_str());
+    rename(nazwaPlikuTymczasowego.c_str(), NAZWA_PLIKU.c_str());
+}
+
+void PlikZAdresatami::ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata)
+{
+        if (noweIdOstatniegoAdresata >= 0)
+            idOstatniegoAdresata = noweIdOstatniegoAdresata;
+}
+
+int PlikZAdresatami::pobierzIdOstatniegoAdresata()
+{
+    return idOstatniegoAdresata;
 }

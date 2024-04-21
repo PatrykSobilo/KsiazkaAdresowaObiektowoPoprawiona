@@ -26,10 +26,9 @@ public:
         delete adresatMenedzer;
         adresatMenedzer = NULL;
     };
+    bool czyUzytkownikJestZalogowany();
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
-
-    bool czyUzytkownikJestZalogowany();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
@@ -40,6 +39,7 @@ public:
     void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    int usunAdresata();
 };
 
 #endif

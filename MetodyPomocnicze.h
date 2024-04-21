@@ -2,11 +2,9 @@
 #define METODYPOMOCNICZE_H
 
 #include <iostream>
-#include <fstream>
-#include <windows.h>
-#include <vector>
-#include <algorithm>
 #include <sstream>
+#include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -19,7 +17,7 @@ public:
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static char wczytajZnak();
-
+    static int wczytajLiczbeCalkowita();
 };
 
 #endif

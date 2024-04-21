@@ -31,8 +31,11 @@ public:
     bool dopiszAdresataDoPliku(Adresat adresat);
     int pobierzZPlikuIdOstatniegoAdresata();
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
 
-
+    void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
+    int pobierzIdOstatniegoAdresata();
 };
 
 #endif

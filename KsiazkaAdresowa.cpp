@@ -91,7 +91,7 @@ void KsiazkaAdresowa::dodajAdresata()
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
     {
         adresatMenedzer -> wyswietlWszystkichAdresatow();
     }
@@ -100,7 +100,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 
 void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
 {
-     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
     {
         adresatMenedzer -> wyszukajAdresatowPoImieniu();
     }
@@ -109,9 +109,18 @@ void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
 
 void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
 {
-     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
     {
         adresatMenedzer -> wyszukajAdresatowPoNazwisku();
+    }
+    else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
+}
+
+int KsiazkaAdresowa::usunAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    {
+        adresatMenedzer -> usunAdresata();
     }
     else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
 }

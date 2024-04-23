@@ -14,14 +14,12 @@ using namespace std;
 
 class PlikZAdresatami :public PlikTekstowy
 {
-    //const string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    //bool czyPlikJestPusty(fstream &plikTekstowy);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami)
@@ -36,6 +34,10 @@ public:
 
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
     int pobierzIdOstatniegoAdresata();
+
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void edytujWybranaLinieWPliku(Adresat adresat, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+
 };
 
 #endif

@@ -124,3 +124,12 @@ int KsiazkaAdresowa::usunAdresata()
     }
     else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
 }
+
+void KsiazkaAdresowa::edytujAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany() > 0)
+    {
+        adresatMenedzer -> edytujAdresata();
+    }
+    else cout << endl << "Funkcja dostepna tylko dla zalogowanego uzytkownika" << endl;
+}

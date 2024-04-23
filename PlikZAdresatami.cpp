@@ -192,11 +192,7 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
     fstream plikZAdresatami;
     fstream plikTymczasowy;
     string linijkaZPlikuAdresatow = "";
-    string numerIdZLinijkiPliku = "";
-    string pojedynczyZnakZLinijkiPliku = "";
     string nazwaPlikuTymczasowego = "plikTymczasowy.txt";
-    string liniaDoZliczenia;
-    int i = 0;
     int nrIdAdresataZPliku = 0;
 
     plikZAdresatami.open(NAZWA_PLIKU.c_str(),ios::in);
@@ -204,14 +200,7 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
 
     while(getline(plikZAdresatami, linijkaZPlikuAdresatow))
     {
-        pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
-        while(pojedynczyZnakZLinijkiPliku != "|")
-        {
-            numerIdZLinijkiPliku += pojedynczyZnakZLinijkiPliku;
-            i++;
-            pojedynczyZnakZLinijkiPliku = linijkaZPlikuAdresatow[i];
-        }
-        nrIdAdresataZPliku = atoi(numerIdZLinijkiPliku.c_str());
+        nrIdAdresataZPliku = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(linijkaZPlikuAdresatow);
         if(nrIdAdresataZPliku != idUsuwanegoAdresata)
         {
             if (PlikTekstowy::czyPlikJestPusty(plikTymczasowy) == true)
@@ -223,8 +212,7 @@ void PlikZAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
                 plikTymczasowy << endl << linijkaZPlikuAdresatow;
             }
         }
-        i = 0;
-        numerIdZLinijkiPliku = "";
+
     }
     plikZAdresatami.close();
     plikTymczasowy.close();
@@ -242,3 +230,16 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
 {
     return idOstatniegoAdresata;
 }
+
+void PlikZAdresatami::zaktualizujDaneWybranegoAdresata(Adresat adresat)
+{
+    int numerLiniiEdytowanegoAdresata = 0;
+    string liniaZDanymiAdresata = "";
+
+    numerLiniiEdytowanegoAdresata = zwrocNumerLiniiSzukanegoAdresata(adresat.pobierzIdAdresata());
+    liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
+    //edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
+
+    cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
+}
+
